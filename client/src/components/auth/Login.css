@@ -23,7 +23,7 @@
     flex-direction: column;
     border-radius: 5px;
     border: 1px solid lightgray;
-    padding: 20px;
+    padding: 20px 26px !important;
 }
 
 .login__container > h1 {
@@ -36,10 +36,14 @@
 }
 
 .login__container > form > input {
-    height: 30px;
+    height: 31px;
     margin-bottom: 10px;
     background-color: white;
     width: 98%;
+    padding: 3px 7px;
+    line-height: normal;
+    border: 1px solid #a6a6a6;
+    border-top-color: #a6a6a6;
 }
 
 .login__container > p{

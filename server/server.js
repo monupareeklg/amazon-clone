@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const passport = require('passport');
 
 const app = express();
 
@@ -26,7 +27,14 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.use(bodyParser.json());
+
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use("/static", express.static("public"));
+
+require("./routes/user.routes")(app);
+app.use(passport.initialize());
 
 app.get("/", (req, res) => {
   res.json({ message: "Hello World" });

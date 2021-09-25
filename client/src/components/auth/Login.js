@@ -11,10 +11,6 @@ function Login() {
     e.preventDefault();
   };
 
-  const register = (e) => {
-    e.preventDefault();
-  };
-
   return (
     <div className="login">
       <Link to="/">
@@ -51,9 +47,11 @@ function Login() {
           see our Privacy Notice, our Cookies Notice and our Intrest-Based Ads
           Notice.
         </p>
-        <button className="login__registerButton" onClick={register}>
-          Create your Amazone Account
-        </button>
+        <Link to="/register">
+          <button className="login__registerButton" type="button">
+            Create your Amazone Account
+          </button>
+        </Link>
       </div>
     </div>
   );
